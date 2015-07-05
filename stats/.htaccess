@@ -1,0 +1,6 @@
+Options +Indexes
+AuthType Basic
+AuthName "ieeetamu.org Statistics"
+AuthUserFile /var/chroot/home/content/28/10682928/html/stats/.statspwd
+Require valid-user
+DirectoryIndex index.html
