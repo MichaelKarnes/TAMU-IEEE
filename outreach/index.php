@@ -1,10 +1,4 @@
 <?php
-require_once '../google-api-php-client-master/autoload.php';
-$client = new Google_Client();
-$client->setApplicationName("My Calendar"); //DON'T THINK THIS MATTERS
-$client->setDeveloperKey('AIzaSyAe4UQX27_gpnFoSjgBOpG8rlPa_W3vYZw'); //GET AT AT DEVELOPERS.GOOGLE.COM
-$cal = new Google_Service_Calendar($client);
-$calendarId = 't697b8s431agv6c4knl1t3tg68@group.calendar.google.com';
 require_once '../core/init.php';
 
 $user = new User();
@@ -43,7 +37,7 @@ $user = new User();
 				<div id="top" class="row">
 					<div class="12u">
 						<div id="logo">
-							<h1><a href="../"><img src="../img/logo_white.png" alt="" style="display: block;" /></a></h1>
+							<h1><a href="../"><img src="../images/logo_white.png" alt="" style="display: block;" /></a></h1>
 							<h2><?php if($user->isLoggedIn()) { ?><font style="font-family: 'Niconne'; font-size: 24pt; color: white;"><?php echo escape($user->data()->username); ?></font><?php } else { ?>Preparing students for careers in technologies<?php } ?></h2>
 						</div>
 						<div id="social">
@@ -81,7 +75,7 @@ $user = new User();
 			<div class="row">
 				<div class="12u">
 					<div id="banner">
-						<img src="../img/outreach-banner.png" alt="Outreach Banner" />
+						<img src="../images/outreach-banner.png" alt="Outreach Banner" />
 					</div>
 					<div id="content">
 						<p>

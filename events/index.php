@@ -43,7 +43,7 @@ $user = new User();
 				<div id="top" class="row">
 					<div class="12u">
 						<div id="logo">
-							<h1><a href="../"><img src="../img/logo_white.png" alt="" style="display: block;" /></a></h1>
+							<h1><a href="../"><img src="../images/logo_white.png" alt="" style="display: block;" /></a></h1>
 							<h2><?php if($user->isLoggedIn()) { ?><font style="font-family: 'Niconne'; font-size: 24pt; color: white;"><?php echo escape($user->data()->username); ?></font><?php } else { ?>Preparing students for careers in technologies<?php } ?></h2>
 						</div>
 						<div id="social">

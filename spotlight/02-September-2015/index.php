@@ -1,10 +1,4 @@
 <?php
-require_once '../google-api-php-client-master/autoload.php';
-$client = new Google_Client();
-$client->setApplicationName("My Calendar"); //DON'T THINK THIS MATTERS
-$client->setDeveloperKey('AIzaSyAe4UQX27_gpnFoSjgBOpG8rlPa_W3vYZw'); //GET AT AT DEVELOPERS.GOOGLE.COM
-$cal = new Google_Service_Calendar($client);
-$calendarId = 't697b8s431agv6c4knl1t3tg68@group.calendar.google.com';
 require_once '../core/init.php';
 
 $user = new User();
@@ -17,7 +11,7 @@ $user = new User();
 -->
 <html>
 <head>
-<title>Texas A&M University IEEE | Contact Us</title>
+<title>Texas A&M University IEEE | Outreach</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta name="description" content="" />
 <meta name="keywords" content="" />
@@ -62,12 +56,12 @@ $user = new User();
 							<nav class="mobileUI-site-nav">
 								<ul>
 									<li><a href="../">Homepage</a></li>
-									<li><a href="../mcc">MC<sup>2</sup></a></li>
-									<li><a href="../outreach/">Outreach</a></li>
+									<li><a href="../mcc/">MC<sup>2</sup></a></li>
+									<li><a href="">Outreach</a></li>
 									<li><a href="../activities/">Activities</a></li>
 									<li><a href="../events/">Events</a></li>
 									<li><a href="../about/">About Us</a></li>
-									<li class="current_page_item"><a href="">Contact Us</a></li>
+									<li><a href="../contact/">Contact Us</a></li>
 								</ul>
 							</nav>
 						</div>
@@ -80,78 +74,19 @@ $user = new User();
 		<div class="5grid-layout">
 			<div class="row">
 				<div class="12u">
+					<div id="banner">
+						<img src="02-September-2015/banner.png" alt="Outreach Banner" />
+					</div>
 					<div id="content">
-						<h2>Contacts Us</h2>
-						<p>Howdy!</p>
-						<p>If you have any questions, please email <a href="mailto:secretary@ieeetamu.org" target="_blank">secretary@ieeetamu.org</a>.</p>
-						<br>
-						<table>
-							<tr>
-								<th>Position</th>
-								<th>Name</th>
-								<th>Email</th>
-							</tr>
-							<tr>
-								<td>President</td>
-								<td>Ken McDole</td>
-								<td><a href="mailto:president@ieeetamu.org" target="_blank">president@ieeetamu.org</a></td>
-							</tr>
-							<tr>
-								<td>Vice President</td>
-								<td>Zac Clingaman</td>
-								<td><a href="mailto:vp@ieeetamu.org" target="_blank">vp@ieeetamu.org</a></td>
-							</tr>
-							<tr>
-								<td>Chief Financial Officer</td>
-								<td>Nathan Parish</td>
-								<td><a href="mailto:cfo@ieeetamu.org" target="_blank">cfo@ieeetamu.org</a></td>
-							</tr>
-							<tr>
-								<td>Activities Chair</td>
-								<td>Alex Benavides</td>
-								<td><a href="mailto:activities@ieeetamu.org" target="_blank">activities@ieeetamu.org</a></td>
-							</tr>
-							<tr>
-								<td>Corporate Relations Chair</td>
-								<td>Adway Dogra</td>
-								<td><a href="mailto:corporate@ieeetamu.org" target="_blank">corporate@ieeetamu.org</a></td>
-							</tr>
-							<tr>
-								<td>Information Technology Chair</td>
-								<td>Michael Karnes</td>
-								<td><a href="mailto:it@ieeetamu.org" target="_blank">it@ieeetamu.org</a></td>
-							</tr>
-							<tr>
-								<td>Marketing Chair</td>
-								<td>Yuki Oji</td>
-								<td><a href="mailto:marketing@ieeetamu.org" target="_blank">marketing@ieeetamu.org</a></td>
-							</tr>
-							<tr>
-								<td>MC<sup>2</sup> Chair</td>
-								<td>Cory Maughmer</td>
-								<td><a href="mailto:mcu@ieeetamu.org" target="_blank">mcu@ieeetamu.org</a></td>
-							</tr>
-							<tr>
-								<td>Outreach Chair</td>
-								<td>D'Anne Wilder</td>
-								<td><a href="mailto:outreach@ieeetamu.org" target="_blank">outreach@ieeetamu.org</a></td>
-							</tr>
-							<tr>
-								<td>Secretary</td>
-								<td>Benjamin Cervantes</td>
-								<td><a href="mailto:secretary@ieeetamu.org" target="_blank">secretary@ieeetamu.org</a></td>
-							</tr>
-							<tr>
-								<td>EGE Graduate Advisor</td>
-								<td>Rhonda Putz</td>
-								<td><a href="mailto:rrputz@tamu.edu" target="_blank">rrputz@tamu.edu</a></td>
-							</tr>
-							<tr>
-								<td>Faculty Advisor</td>
-								<td>Dr. Gregory Huff</td>
-								<td><a href="mailto:ghuff@tamu.edu" target="_blank">ghuff@tamu.edu</a></td>
-							</tr>
-						</table>
+						<h2>Introducing IEEE Spotlight</h2>
+                        <p>
+                            Have you ever created an awesome project and wished that you could send it to dozens of companies at the same time?
+                            Now's your chance to do so! Simply apply to IEEE Spotlight, and you could win a chance for your project to be advertised
+                            on our website, Facebook page, and Twitter account! Every month we will select a new project to post across the internet,
+                            so make sure to apply every month.
+                        </p>
+                        <br>
+                        <a href="apply">Apply for your chance in the limelight</a>
 					</div>
 				</div>
 			</div>
