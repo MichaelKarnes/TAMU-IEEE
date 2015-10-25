@@ -11,7 +11,7 @@
 /* Header */
 
 #header-wrapper {
-	background: url(images/img07.png) no-repeat center top;
+	background: url(../images/img07.png) no-repeat center top;
 }
 
 #header {
@@ -71,7 +71,7 @@
 /* Menu */
 
 #menu-wrapper {
-	background: url(images/img06.png) top right repeat;
+	background: url(../images/img06.png) top right repeat;
 }
 
 #menu {
@@ -199,7 +199,7 @@
 
 #sidebar1 h2 {
 	height: 50px;
-	background: url(images/img01.png) repeat;
+	background: url(../images/img01.png) repeat;
 	margin-bottom: 20px;
 	padding: 0px 0px 0px 20px;
 	line-height: 50px;
@@ -221,7 +221,7 @@
 
 #sidebar2 h2 {
 	height: 50px;
-	background: url(images/img10.png) no-repeat right top;
+	background: url(../images/img10.png) no-repeat right top;
 	margin-bottom: 20px;
 	padding: 0px 0px 0px 20px;
 	line-height: 50px;

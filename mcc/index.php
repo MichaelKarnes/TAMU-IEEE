@@ -1,5 +1,5 @@
 <?php
-require_once '../google-api-php-client-master/autoload.php';
+require_once '../plugins/google-api-php-client-master/autoload.php';
 $client = new Google_Client();
 $client->setApplicationName("My Calendar"); //DON'T THINK THIS MATTERS
 $client->setDeveloperKey('AIzaSyAe4UQX27_gpnFoSjgBOpG8rlPa_W3vYZw'); //GET AT AT DEVELOPERS.GOOGLE.COM
@@ -44,7 +44,7 @@ $user = new User();
 					<div class="12u">
 						<div id="logo">
 							<h1><a href="../"><img src="../images/logo_white.png" alt="" style="display: block;" /></a></h1>
-							<h2><?php if($user->isLoggedIn()) { ?><font style="font-family: 'Niconne'; font-size: 24pt; color: white;"><?php echo escape($user->data()->username); ?></font><?php } else { ?>Preparing students for careers in technologies<?php } ?></h2>
+							<h2>Preparing students for careers in technologies</h2>
 						</div>
 						<div id="social">
 							<ul class="contact">
@@ -109,7 +109,7 @@ $user = new User();
 </div>
 <div id="copyright" class="5grid-layout">
 	<section>
-		<p>&copy; Texas A&M University IEEE |  Design: <a href="http://templated.co/">TEMPLATED</a> | <?php if($user->isLoggedIn()) { ?><a href="../actions/logout.php">Log Out</a><?php } else { ?><a href="javascript:%20popup_show()">Meta Login</a><?php } ?></p>
+		<p>&copy; Texas A&M University IEEE |  Design: <a href="http://templated.co/">TEMPLATED</a> | <a href="javascript:%20popup_show()">Meta Login</a></p>
 	</section>
 	<section id="popup">
 		<!-- Login Form -->
