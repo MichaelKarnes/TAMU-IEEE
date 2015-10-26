@@ -82,8 +82,8 @@ $user = new User();
 				<div class="8u">
 					<div id="content">
 						<h2>MC<sup>2</sup></h2>
-						<p>MC<sup>2</sup> Chair: Matthew DeStefano</p>
-						<p>Email: <a href="mailto:mcc@ieeetamu.org" target="_blank">mcc@ieeetamu.org</a></p>
+						<p>MC<sup>2</sup> Chair: Cory Maughmer</p>
+						<p>Email: <a href="mailto:mcc@ieeetamu.org" target="_blank">mcu@ieeetamu.org</a></p>
 						<br>
 						<p>
 							The Microcontroller Committee works to create an environment where students can gain practical skills that will help them succeed in the future. We host a variety of workshops to teach the fundamentals of microcontrollers, and how to apply that knowledge to projects. Our project meetings allow students to apply what they've learned, and gain hands on experience with design, part selection, and construction. These activities provide a low stress environment for students to experiment with engineering and design, and this allows new engineers to learn skills that textbooks can't teach.
