@@ -320,4 +320,11 @@
 	width: 70%;
 }
 
+#sponsors ul {
+    text-align: center;
+}
 
+#sponsors li {
+    display: inline-block;
+    padding: 0 10px;
+}

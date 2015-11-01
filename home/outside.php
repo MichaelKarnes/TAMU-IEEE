@@ -77,7 +77,9 @@ $nivo->render_includes();
 				<div class="12u">
 					<div id="banner">
 						<?php
-                            $nivo->add_slide('http://www.ieeetamu.org/images/aggie+replant+banner.jpg','','Aggie Replant');
+                            $nivo->add_slide('http://www.ieeetamu.org/images/chevron-phillips-banner.jpg','https://www.facebook.com/events/1651214638470238/','Chevron Phillips October 29');
+                            $nivo->add_slide('http://www.ieeetamu.org/images/frieee-day-halloween-banner.jpg','https://www.facebook.com/events/458908400962639/','FrIEEE Day October 30');
+                            $nivo->add_slide('http://www.ieeetamu.org/images/prosthetic-hand-banner.jpg','https://www.facebook.com/ieeetamu/videos/1072047142807423/','3D Printed Prosthetic Hand by Benjamin Cervantes and Gabriel Wang');
 							$nivo->render_slides();
 						?>
 					</div>
@@ -89,33 +91,27 @@ $nivo->render_includes();
 			<div class="row">
                 <div class="9u">
 					<div id="content">
-						<section style="float:left">
-							<div class="post" style="float:left">
-								<h2>Officer Applications</h2>
-								<p style="float:left">
-                                    Are you interested in joining our ranks as an IEEE officer?<br>
+                        <section style="float:left; width: 100%;">
+							<div class="post" style="float:left;">
+								<h2>Chevron Phillips Chemical</h2>
+								<p style="float:left; width: 100%;">
+									<a href="https://www.facebook.com/events/1651214638470238/" target="_blank"><img src="https://gallery.mailchimp.com/33b9ea9f8b20c10680334de73/images/f73722c9-3a7e-4b9a-8bae-35c40aa4e57f.jpg" width="200" alt="" align="left" class="img-alignleft" /></a>
+                                    <b>Check this out!</b><br>
+                                    IEEE will be hosting Richard Olivo from Chevron Phillips Chemical. Richard will go over the culture at the company, the kind of work EEs do, and the various career opportunities
+                                    at CPChem for EEs. Richard will also give resume writing tips and advice on how to be better prepared for the Engineering Career Fair.<br>
                                     <br>
-                                    The following positions are currently open:<br>
-                                    Recruiting Officer<br>
-                                    Vice TEC Officer<br>
-                                    Microcontroller Chair<br>
-                                    CAD/3D Printing Chair<br>
-                                    Programming Chair<br>
-                                    Vice Corporate Officer<br>
-                                    Vice Information Technology Officer<br>
-                                    Vice Marketing Officer<br>
-                                    Promotional Materials Chair<br>
-                                    Social Media Chair<br>
-                                    Vice Activities Chair<br>
+                                    <b>About the speaker:</b><br>
+                                    Richard Olivo is a maintenance engineer at Chevron Phillips Chemical. He got his BS in Electrical Engineering from Texas A&M University in 2014.<br>
                                     <br>
-                                    If you're interested in filling any of these positions, please download and fill out our officer application at <a href="https://docs.google.com/document/d/1g1sXvlc_encq09yzV96lxv-80gaksL4UeiNDqG7qURQ/edit?usp=sharing">https://docs.google.com/document/d/1g1sXvlc_encq09yzV96lxv-80gaksL4UeiNDqG7qURQ/edit?usp=sharing</a>.<br>
-                                    Submit the all applications to <a href="mailto:secretary@ieeetamu.org">secretary@ieeetamu.org</a> <em>and</em> <a href="mailto:president@ieeetamu.org">president@ieeetamu.org</a> by <b>October 18th</b>.
+                                    <a href="https://www.facebook.com/events/1651214638470238/" target="_blank">https://www.facebook.com/events/1651214638470238/</a><br>
                                 </p>
-                                <span class="expand" style="float:left">
+								<span class="expand" style="float:left">
 									<span class="expand-details expand-less">
 										<br>
-										<span style="float: left; width: 70px;">Date: </span><span class="font2">Sunday, October 18th</span><br>
-                                        <span style="float: left; width: 70px;">Time: </span><span class="font2">11:59 pm</span>
+										<span style="float: left; width: 70px;">Date: </span><span class="font2">Thursday, October 29th</span><br>
+                                        <span style="float: left; width: 70px;">Time: </span><span class="font2">6:00 pm</span><br>
+										<span style="float: left; width: 70px;">Location: </span><span class="font2">WEB 236C</span><br>
+                                        <span style="float: left;">* Food and Drinks will be provided.</span>
 									</span>
 									<br>
 									<span class="expand-summary">View Details <i class="fa fa-chevron-down"></i></span>
@@ -124,45 +120,18 @@ $nivo->render_includes();
 						</section>
                         <section style="float:left; width: 100%;">
 							<div class="post" style="float:left;">
-								<h2>Joint AIAA & IEEE Corporate Meeting</h2>
+								<h2>FrIEEE Day</h2>
 								<p style="float:left; width: 100%;">
-									<img src="http://www.ieeetamu.org/images/L3+Communications.png" width="200" alt="" align="left" class="img-alignleft" />
-                                    <b>Interested in the aerospace industry?</b><br>
-                                    <br>
-                                    The local branch of the American Institute of Aeronautics and Astronautics (AIAA-TAMU) will host L3 Communications/Mission
-                                    Integration. The company is seeking EE, CS, and Computer Engineering majors, so attend the meeting to learn more about these
-                                    opportunities!<br>
-                                    <br>
-                                    Please RSVP at <a href="https://www.eventbrite.com/e/l3-informational-tickets-19053177567" target="_blank">https://www.eventbrite.com/e/l3-informational-tickets-19053177567</a>
-                                    for free food and don't forget to bring your resume.
+									<img src="https://gallery.mailchimp.com/33b9ea9f8b20c10680334de73/images/4dd31f35-0dd8-4551-99a7-7ef5c8779f10.png" width="200" alt="" align="left" class="img-alignleft" />
+                                    <b>Are you looking for a way to take a break?</b><br>
+                                    IEEE will be hosting its first social of the school year! Join us for games and food! Bring your friends and join us to win some prizes!<br>
                                 </p>
 								<span class="expand" style="float:left">
 									<span class="expand-details expand-less">
 										<br>
-										<span style="float: left; width: 70px;">Date: </span><span class="font2">Tuesday, October 20th</span><br>
-                                        <span style="float: left; width: 70px;">Time: </span><span class="font2">7:00 pm</span><br>
-										<span style="float: left; width: 70px;">Location: </span><span class="font2">RDMC 202</span>
-									</span>
-									<br>
-									<span class="expand-summary">View Details <i class="fa fa-chevron-down"></i></span>
-								</span>
-							</div>
-						</section>
-                        <section style="float:left; width: 100%;">
-							<div class="post" style="float:left;">
-								<h2>Aggie Replant</h2>
-								<p style="float:left; width: 100%;">
-									<a href="https://replantonline.tamu.edu/signup/index/joingroup/code/80C5B-00150" target="_blank"><img src="http://www.ieeetamu.org/images/Aggie+Replant+Photo.jpeg" width="200" alt="" align="left" class="img-alignleft" /></a>
-                                    Interested in giving back to the community? Aggie Replant is a one-day service project where we plant trees around the Bryan/College Station
-                                    area to give back to the community. It is always a lot of fun, and we encourage you to sign up!<br>
-                                    <br>
-                                    How can you participate? The spots are limited, so please try to sign up at <a href="https://replantonline.tamu.edu/signup/index/joingroup/code/80C5B-00150" target="_blank">https://replantonline.tamu.edu/signup/index/joingroup/code/80C5B-00150</a> as soon as possible!
-                                </p>
-								<span class="expand" style="float:left">
-									<span class="expand-details expand-less">
-										<br>
-										<span style="float: left; width: 70px;">Date: </span><span class="font2">Saturday, October 24th</span><br>
-										<span style="float: left; width: 70px;">Location: </span><span class="font2">Bryan/College Station</span>
+										<span style="float: left; width: 70px;">Date: </span><span class="font2">Friday, October 30th</span><br>
+                                        <span style="float: left; width: 70px;">Time: </span><span class="font2">4:00 pm</span><br>
+										<span style="float: left; width: 70px;">Location: </span><span class="font2">John Crompton Park</span>
 									</span>
 									<br>
 									<span class="expand-summary">View Details <i class="fa fa-chevron-down"></i></span>
@@ -176,7 +145,7 @@ $nivo->render_includes();
 									<img src="http://www.ieeetamu.org/images/Intel.jpg" width="200" alt="" align="left" class="img-alignleft" />
                                     Intel will be speaking to IEEE on <b>November 5th</b>.<br>
                                     <br>
-                                    About the speaker:<br>
+                                    <b>About the speaker:</b><br>
                                     John Wei is an engineering manager at Intel in Santa Clara, CA. He has a BSE and MSE in Electrical Engineering.
                                     John’s team works with server companies to design the highest performing servers in the world.
                                     Through computing innovation, Intel pushes the boundaries of smart and connected technology to make amazing experiences possible for every person on Earth.
@@ -345,6 +314,17 @@ $nivo->render_includes();
 <div id="copyright" class="5grid-layout">
 	<section>
 		<p>&copy; Texas A&M University IEEE |  Design: <a href="http://templated.co/">TEMPLATED</a> | <a href="javascript:%20popup_show()">Meta Login</a></p>
+        <br>
+	</section>
+    <section id="sponsors">
+        <ul>
+            <li><a href="http://www.ieee.org/index.html" target="_blank"><img src="images/ieee-logo.png" alt="IEEE" height="30" /></a></li>
+            <li><a href="http://burnsmcd.com/" target="_blank"><img src="images/burns-mcdonnell-logo.png" alt="Burns McDonnell" height="30" /></a></li>
+            <li><a href="http://www.dow.com/" target="_blank"><img src="images/dow-logo.png" alt="DOW Chemical" height="30" /></a></li>
+            <li><a href="http://www.shell.us/" target="_blank"><img src="images/shell-logo.png" alt="Shell" height="30" /></a></li>
+            <li><a href="http://www.chevron.com/" target="_blank"><img src="images/chevron-logo.png" alt="Chevron" height="30" /></a></li>
+            <li><a href="http://www.boeing.com/" target="_blank"><img src="images/boeing-logo.png" alt="Boeing" height="30" /></a></li>
+        </ul>
 	</section>
 	<section id="popup">
 		<!-- Login Form -->

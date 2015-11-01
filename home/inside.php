@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker-bs3.css">
     <!-- bootstrap wysihtml5 - text editor -->
     <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
-     <!-- jQuery 2.1.4 -->
+    <!-- jQuery 2.1.4 -->
     <script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
     <!-- jQuery UI 1.11.4 -->
     <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
@@ -71,9 +71,9 @@
         <!-- Logo -->
         <a href="index2.html" class="logo">
           <!-- mini logo for sidebar mini 50x50 pixels -->
-          <span class="logo-mini"><b>A</b>LT</span>
+          <span class="logo-mini"><b>IEEE</b></span>
           <!-- logo for regular state and mobile devices -->
-          <span class="logo-lg"><b>Admin</b>LTE</span>
+          <span class="logo-lg">Texas A&M <b>IEEE</b></span>
         </a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top" role="navigation">
@@ -505,7 +505,7 @@
           <div class="row">
             <div class="col-lg-3 col-xs-6">
               <!-- small box -->
-              <div class="small-box bg-aqua">
+              <div class="small-box bg-blue">
                 <div class="inner">
                   <h3>150</h3>
                   <p>New Orders</p>
@@ -518,7 +518,7 @@
             </div><!-- ./col -->
             <div class="col-lg-3 col-xs-6">
               <!-- small box -->
-              <div class="small-box bg-green">
+              <div class="small-box bg-blue">
                 <div class="inner">
                   <h3>53<sup style="font-size: 20px">%</sup></h3>
                   <p>Bounce Rate</p>
@@ -531,7 +531,7 @@
             </div><!-- ./col -->
             <div class="col-lg-3 col-xs-6">
               <!-- small box -->
-              <div class="small-box bg-yellow">
+              <div class="small-box bg-blue">
                 <div class="inner">
                   <h3>44</h3>
                   <p>User Registrations</p>
@@ -544,7 +544,7 @@
             </div><!-- ./col -->
             <div class="col-lg-3 col-xs-6">
               <!-- small box -->
-              <div class="small-box bg-red">
+              <div class="small-box bg-blue">
                 <div class="inner">
                   <h3>65</h3>
                   <p>Unique Visitors</p>
