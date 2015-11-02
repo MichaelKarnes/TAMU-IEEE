@@ -12,46 +12,47 @@ if(Input::exists()) {
         $major_gpa = Input::get('major_gpa');
 
         function flashvars($id, $name, $major, $overall_gpa, $major_gpa) {
-            Session::flash('id', $id);
-            Session::flash('name', $name);
-            Session::flash('major', $major);
-            Session::flash('overall_gpa', $overall_gpa);
-            Session::flash('major_gpa', $major_gpa);
-            echo $id;
+            Session::put('id', $id);
+            Session::put('name', $name);
+            Session::put('major', $major);
+            Session::put('overall_gpa', $overall_gpa);
+            Session::put('major_gpa', $major_gpa);
+            Redirect::to($_SERVER['HTTP_REFERER']);
+            die();
         }
 
         if(empty($name)) {
-            Session::flash('error', 'Full Name is a required field');
+            Session::put('error', 'Full Name is a required field');
             flashvars($id, $name, $major, $overall_gpa, $major_gpa);
         } else if(empty($id)) {
-            Session::flash('error', 'IEEE Member Number is a required field');
+            Session::put('error', 'IEEE Member Number is a required field');
             flashvars($id, $name, $major, $overall_gpa, $major_gpa);
         } else if(empty($overall_gpa)) {
-            Session::flash('error', 'Overall GPA is a required field');
+            Session::put('error', 'Overall GPA is a required field');
             flashvars($id, $name, $major, $overall_gpa, $major_gpa);
         } else if(empty($major_gpa)) {
-            Session::flash('error', 'Major GPA is a required field');
+            Session::put('error', 'Major GPA is a required field');
             flashvars($id, $name, $major, $overall_gpa, $major_gpa);
         } else if(empty($_FILES['resume']['tmp_name'])) {
-            Session::flash('error', 'Resume is a required field');
+            Session::put('error', 'Resume is a required field');
             flashvars($id, $name, $major, $overall_gpa, $major_gpa);
         } else if(!is_numeric($id)) {
-            Session::flash('error', 'IEEE Member Number must be a number');
+            Session::put('error', 'IEEE Member Number must be a number');
             flashvars($id, $name, $major, $overall_gpa, $major_gpa);
         } else if(!is_numeric($major_gpa)) {
-            Session::flash('error', 'Major GPA must be a number');
+            Session::put('error', 'Major GPA must be a number');
             flashvars($id, $name, $major, $overall_gpa, $major_gpa);
         } else if($major_gpa < 0 || $major_gpa > 4) {
-            Session::flash('error', 'Invalid Major GPA');
+            Session::put('error', 'Invalid Major GPA');
             flashvars($id, $name, $major, $overall_gpa, $major_gpa);
         } else if(!is_numeric($overall_gpa)) {
-            Session::flash('error', 'Overall GPA must be a number');
+            Session::put('error', 'Overall GPA must be a number');
             flashvars($id, $name, $major, $overall_gpa, $major_gpa);
         } else if($overall_gpa < 0 || $overall_gpa > 4) {
-            Session::flash('error', 'Invalid Overall GPA');
+            Session::put('error', 'Invalid Overall GPA');
             flashvars($id, $name, $major, $overall_gpa, $major_gpa);
         } else if(floor(log10($id)) != 7) {
-            Session::flash('error', 'Invalid Member ID');
+            Session::put('error', 'Invalid Member ID');
             flashvars($id, $name, $major, $overall_gpa, $major_gpa);
         } else {
             $resume = $db->get('resumes', array('id', '=', $id))->first();
@@ -59,13 +60,15 @@ if(Input::exists()) {
                 $hash = Hash::unique();
                 $ext = pathinfo($_FILES['resume']['name'], PATHINFO_EXTENSION);
 
-                $ftp_conn = ftp_connect('ieeetamu.org');
+                /*$ftp_conn = ftp_connect('ieeetamu.org');
                 ftp_login($ftp_conn, 'ieeetamu', 'IT0fficer!');
                 ftp_pasv($ftp_conn, true);
                 $ret = ftp_put($ftp_conn, 'resumes/'.$hash.'.'.$ext, $_FILES['resume']['tmp_name'], FTP_BINARY);
                 if ($ret == FTP_FINISHED)
                     ftp_chmod($ftp_conn, 0700, 'resumes/'.$hash.'.'.$ext);
-                ftp_close($ftp_conn);
+                ftp_close($ftp_conn);*/
+                move_uploaded_file($_FILES['resume']['tmp_name'], '../resumes/'.$hash.'.'.$ext);
+                chmod(0700, '../resumes/'.$hash.'.'.$ext);
 
                 $db->insert('resumes', array(
                     'id' => $id,
@@ -76,12 +79,12 @@ if(Input::exists()) {
                     'filehash' => $hash,
                     'ext' => $ext
                 ));
-                Session::flash('success', 'Your resume has been uploaded');
+                Session::put('success', 'Your resume has been uploaded');
             } else {
                 $hash = $resume->filehash;
                 $ext = $resume->ext;
 
-                $ftp_conn = ftp_connect('ieeetamu.org');
+                /*$ftp_conn = ftp_connect('ieeetamu.org');
                 ftp_login($ftp_conn, 'ieeetamu', 'IT0fficer!');
                 ftp_pasv($ftp_conn, true);
                 ftp_delete($ftp_conn, 'resumes/'.$hash.'.'.$ext);
@@ -89,7 +92,11 @@ if(Input::exists()) {
                 $ret = ftp_put($ftp_conn, 'resumes/'.$hash.'.'.$ext, $_FILES['resume']['tmp_name'], FTP_BINARY);
                 if ($ret == FTP_FINISHED)
                     ftp_chmod($ftp_conn, 0700, 'resumes/'.$hash.'.'.$ext);
-                ftp_close($ftp_conn);
+                ftp_close($ftp_conn);*/
+                unlink('../resumes/'.$hash.'.'.$ext);
+                $ext = pathinfo($_FILES['resume']['name'], PATHINFO_EXTENSION);
+                move_uploaded_file($_FILES['resume']['tmp_name'], '../resumes/'.$hash.'.'.$ext);
+                chmod(0700, '../resumes/'.$hash.'.'.$ext);
 
                 $db->update('resumes', $id, array(
                     'name' => $name,
@@ -98,7 +105,7 @@ if(Input::exists()) {
                     'major_gpa' => $major_gpa,
                     'ext' => $ext
                 ));
-                Session::flash('success', 'Your resume has been updated');
+                Session::put('success', 'Your resume has been updated');
             }
         }
 	}

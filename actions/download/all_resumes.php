@@ -16,8 +16,8 @@ if(Input::exists()) {
     foreach($ids as $id) {
         $resume = $db->get('resumes', array('id', '=', $id))->first();
 
-        $path = "ftp://ieeetamu:IT0fficer!@ieeetamu.org/resumes/".$resume->filehash.".".$resume->ext; // change the path to fit your websites document structure
-        $contents = file_get_contents("ftp://ieeetamu:IT0fficer!@ieeetamu.org/resumes/".$resume->filehash.".".$resume->ext);
+        $path = "../resumes/".$resume->filehash.".".$resume->ext; // change the path to fit your websites document structure
+        $contents = file_get_contents("../resumes/".$resume->filehash.".".$resume->ext);
         $zip->addFromString($resume->name.".".$resume->ext, $contents);
     }
 
@@ -27,5 +27,6 @@ if(Input::exists()) {
     header('Content-disposition: attachment; filename=Resumes.zip');
     header('Content-Length: ' . filesize('Resumes.zip'));
     readfile('Resumes.zip');
+    unlink('Resumes.zip');
 }
 ?>

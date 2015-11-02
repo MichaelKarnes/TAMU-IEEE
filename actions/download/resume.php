@@ -10,7 +10,7 @@ if(Input::exists()) {
     ignore_user_abort(true);
     set_time_limit(0); // disable the time limit for this script
 
-    $path = "ftp://ieeetamu:IT0fficer!@ieeetamu.org/resumes/".$resume->filehash.".".$resume->ext; // change the path to fit your websites document structure
+    $path = "../resumes/".$resume->filehash.".".$resume->ext; // change the path to fit your websites document structure
     if ($fd = fopen ($path, "r")) {
         $fsize = filesize($path);
 
