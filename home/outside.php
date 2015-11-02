@@ -275,6 +275,12 @@ $nivo->render_includes();
 									<center><input type="submit" value="Subscribe" class="button" /></center>
 								</form>
 							</div>
+                            <div class="sbox2">
+								<h2>Resumes</h2>
+                                <p>Want to reach out to our sponsors?</p>
+                                <br>
+                                <center><a href="resumes/" style="text-decoration: none;"><button class="button" >Submit your resume!</button></a></center>
+							</div>
 							<div class="sbox2">
 								<h2>Upcoming Events</h2>
 								<ul class="style1">
