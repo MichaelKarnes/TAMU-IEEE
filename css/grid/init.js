@@ -1,5 +1,5 @@
 /*****************************************************************/
-/* 5grid 0.3.2 by n33.co | MIT+GPLv2 license licensed            */
+/* grid 0.3.2 by n33.co | MIT+GPLv2 license licensed            */
 /* init.js: Init script                                          */
 /*****************************************************************/
 
@@ -7,7 +7,7 @@
 /* Object Setup      */
 /*********************/
 
-	var _5gridC = function()
+	var _gridC = function()
 	{
 		this.events = new Array();
 
@@ -19,7 +19,7 @@
 		this.is1200px = false;
 	}
 
-	_5gridC.prototype.bind = function(name, f)
+	_gridC.prototype.bind = function(name, f)
 	{
 		if (!this.events[name])
 			this.events[name] = new Array();
@@ -27,7 +27,7 @@
 		this.events[name].push(f);
 	}
 
-	_5gridC.prototype.trigger = function(name)
+	_gridC.prototype.trigger = function(name)
 	{
 		if (!this.isReady || !this.events[name] || this.events[name].length < 1)
 			return;
@@ -36,12 +36,12 @@
 			(this.events[name][i])();
 	}
 
-	_5gridC.prototype.ready = function(f) { this.bind('ready', f); }
-	_5gridC.prototype.orientationChange = function(f) { this.bind('orientationChange', f); }
-	_5gridC.prototype.mobileUINavOpen = function(f) { this.bind('mobileUINavOpen', f); }
-	_5gridC.prototype.mobileUINavClose = function(f) { this.bind('mobileUINavClose', f); }
+	_gridC.prototype.ready = function(f) { this.bind('ready', f); }
+	_gridC.prototype.orientationChange = function(f) { this.bind('orientationChange', f); }
+	_gridC.prototype.mobileUINavOpen = function(f) { this.bind('mobileUINavOpen', f); }
+	_gridC.prototype.mobileUINavClose = function(f) { this.bind('mobileUINavClose', f); }
 
-	_5gridC.prototype.readyCheck = function()
+	_gridC.prototype.readyCheck = function()
 	{
 		var x = this;
 		
@@ -53,7 +53,7 @@
 		}, 50);
 	}
 
-	var _5grid = new _5gridC;
+	var _grid = new _gridC;
 
 
 (function() {
@@ -70,9 +70,9 @@
 			v, w, x, y;
 
 	// Shortcut methods
-		_headQueue.pushI_5grid = function(s) { _headQueue.push({ type: 'i', value: s }); };
-		_headQueue.pushE_5grid = function(s) { _headQueue.push({ type: 'e', value: s }); }; 
-		_headQueue.process_5grid = function() {
+		_headQueue.pushI_grid = function(s) { _headQueue.push({ type: 'i', value: s }); };
+		_headQueue.pushE_grid = function(s) { _headQueue.push({ type: 'e', value: s }); }; 
+		_headQueue.process_grid = function() {
 			var doE;
 			if (document.createStyleSheet)
 				doE = function(s) { document.createStyleSheet(s); };
@@ -87,14 +87,14 @@
 					(doE)(_headQueue[x].value);
 			}
 		};
-		jQuery.fn.disableSelection_5grid = function() { return jQuery(this).css('user-select', 'none').css('-khtml-user-select', 'none').css('-moz-user-select', 'none').css('-o-user-select', 'none').css('-webkit-user-select', 'none'); }
-		jQuery.fn.enableSelection_5grid = function() { return jQuery(this).css('user-select', 'auto').css('-khtml-user-select', 'auto').css('-moz-user-select', 'auto').css('-o-user-select', 'auto').css('-webkit-user-select', 'auto'); }
-		jQuery.fn.accelerate_5grid = function() { return jQuery(this).css('-webkit-transform', 'translateZ(0)').css('-webkit-backface-visibility', 'hidden').css('-webkit-perspective', '1000'); }
+		jQuery.fn.disableSelection_grid = function() { return jQuery(this).css('user-select', 'none').css('-khtml-user-select', 'none').css('-moz-user-select', 'none').css('-o-user-select', 'none').css('-webkit-user-select', 'none'); }
+		jQuery.fn.enableSelection_grid = function() { return jQuery(this).css('user-select', 'auto').css('-khtml-user-select', 'auto').css('-moz-user-select', 'auto').css('-o-user-select', 'auto').css('-webkit-user-select', 'auto'); }
+		jQuery.fn.accelerate_grid = function() { return jQuery(this).css('-webkit-transform', 'translateZ(0)').css('-webkit-backface-visibility', 'hidden').css('-webkit-perspective', '1000'); }
 
 	// Determine base URL, opts
-		x = jQuery('script').filter(function() { return this.src.match(/5grid\/init\.js/); }).first();
+		x = jQuery('script').filter(function() { return this.src.match(/grid\/init\.js/); }).first();
 		y = x.attr('src').split('?');
-		_baseURL = y[0].replace(/5grid\/init\.js/, '');
+		_baseURL = y[0].replace(/grid\/init\.js/, '');
 		_opts = new Array();
 
 		// Default opts
@@ -128,7 +128,7 @@
 	
 	// Debug options
 		if (_opts['debug.noExtLoad'] == 1)
-			_headQueue.pushE_5grid = function(s) { };
+			_headQueue.pushE_grid = function(s) { };
 	
 	// Determine viewing modes
 		_desktop = _mobile = _fluid = _1000px = _1200px = _mobileOnly = false;
@@ -158,20 +158,20 @@
 		{
 			// HTML5 Shiv
 				if (jQuery.browser.version < 9)
-					_head.append('<script type="text/javascript" src="' + _baseURL + '5grid/html5shiv.js" />');
+					_head.append('<script type="text/javascript" src="' + _baseURL + 'grid/html5shiv.js" />');
 
 			// Versions that don't support CSS3 pseudo classes
 				if (jQuery.browser.version < 8)
 				{
 					jQuery(function() {
-						jQuery('.5grid, .5grid-layout, .do-5grid').after('<div style="clear: both;"></div>');
+						jQuery('.grid, .grid-layout, .do-grid').after('<div style="clear: both;"></div>');
 					});
 				}
 		}
 
 	// Insert stylesheets
-		_headQueue.pushE_5grid(_baseURL + '5grid/core.css')
-		_headQueue.pushE_5grid(_baseURL + _opts['prefix'] + '.css');
+		_headQueue.pushE_grid(_baseURL + 'grid/core.css')
+		_headQueue.pushE_grid(_baseURL + _opts['prefix'] + '.css');
 
 /*********************/
 /* Responsive        */
@@ -191,9 +191,9 @@
 		// Mobile (exclusive)
 		if ((_mobile && (ww <= 480 || sw <= 480)) || _mobileOnly)
 		{
-			_5grid.isMobile = true;
+			_grid.isMobile = true;
 			_head.prepend('<meta name="viewport" content="initial-scale=1.0; minimum-scale=1.0; maximum-scale=1.0;" />');
-			_headQueue.pushE_5grid(_baseURL + '5grid/core-mobile.css');
+			_headQueue.pushE_grid(_baseURL + 'grid/core-mobile.css');
 			
 			if (_opts['mobileUI'] == 1)
 			{
@@ -201,57 +201,57 @@
 
 				if (_opts['mobileUI.theme'] != 'none')
 				{
-					_headQueue.pushE_5grid(_baseURL + '5grid/mobileUI-' + _opts['mobileUI.theme'] + '.css');
+					_headQueue.pushE_grid(_baseURL + 'grid/mobileUI-' + _opts['mobileUI.theme'] + '.css');
 
 					if (_opts['mobileUI.themeTitleBarColor'])
-						_headQueue.pushI_5grid('#mobileUI-site-titlebar { background: ' + _opts['mobileUI.themeTitleBarColor'] + '; }');
+						_headQueue.pushI_grid('#mobileUI-site-titlebar { background: ' + _opts['mobileUI.themeTitleBarColor'] + '; }');
 
 					if (_opts['mobileUI.themeNavColor'])
-						_headQueue.pushI_5grid('#mobileUI-site-nav { background: ' + _opts['mobileUI.themeNavColor'] + '; }');
+						_headQueue.pushI_grid('#mobileUI-site-nav { background: ' + _opts['mobileUI.themeNavColor'] + '; }');
 				}
 			}
 
-			_headQueue.pushE_5grid(_baseURL + _opts['prefix'] + '-mobile.css');
+			_headQueue.pushE_grid(_baseURL + _opts['prefix'] + '-mobile.css');
 		}
 		else
 		{
 			// Fluid (exclusive)
 			if (_fluid)
 			{
-				_5grid.isFluid = true;
+				_grid.isFluid = true;
 				_head.prepend('<meta name="viewport" content="width=' + _opts['viewport.is1200px'] + '" />');
-				_headQueue.pushE_5grid(_baseURL + '5grid/core-desktop.css');
-				_headQueue.pushE_5grid(_baseURL + '5grid/core-fluid.css');
-				_headQueue.pushE_5grid(_baseURL + _opts['prefix'] + '-fluid.css');
+				_headQueue.pushE_grid(_baseURL + 'grid/core-desktop.css');
+				_headQueue.pushE_grid(_baseURL + 'grid/core-fluid.css');
+				_headQueue.pushE_grid(_baseURL + _opts['prefix'] + '-fluid.css');
 			}
 			// Desktop
 			else if (_desktop)
 			{
-				_5grid.isDesktop = true;
-				_headQueue.pushE_5grid(_baseURL + '5grid/core-desktop.css');
-				_headQueue.pushE_5grid(_baseURL + _opts['prefix'] + '-desktop.css');
+				_grid.isDesktop = true;
+				_headQueue.pushE_grid(_baseURL + 'grid/core-desktop.css');
+				_headQueue.pushE_grid(_baseURL + _opts['prefix'] + '-desktop.css');
 			
 				// 1200px
 				if (ww >= 1200)
 				{
-					_5grid.is1200px = true;
+					_grid.is1200px = true;
 					_head.prepend('<meta name="viewport" content="width=' + _opts['viewport.is1200px'] + '" />');
-					_headQueue.pushE_5grid(_baseURL + '5grid/core-1200px.css');
+					_headQueue.pushE_grid(_baseURL + 'grid/core-1200px.css');
 					
 					// Load 1200px stylesheet if 1200px was explicitly enabled
 					if (_1200px)
-						_headQueue.pushE_5grid(_baseURL + _opts['prefix'] + '-1200px.css');
+						_headQueue.pushE_grid(_baseURL + _opts['prefix'] + '-1200px.css');
 				}
 				// 1000px
 				else
 				{
-					_5grid.is1000px = true;
+					_grid.is1000px = true;
 					_head.prepend('<meta name="viewport" content="width=' + _opts['viewport.is1000px'] + '" />');
-					_headQueue.pushE_5grid(_baseURL + '5grid/core-1000px.css');
+					_headQueue.pushE_grid(_baseURL + 'grid/core-1000px.css');
 
 					// Load 1000px stylesheet if 1000px was explicitly enabled
 					if (_1000px)
-						_headQueue.pushE_5grid(_baseURL + _opts['prefix'] + '-1000px.css');
+						_headQueue.pushE_grid(_baseURL + _opts['prefix'] + '-1000px.css');
 				}
 			}
 			else
@@ -259,27 +259,27 @@
 				// 1000px (exclusive)
 				if (_1000px && (ww < 1200 || !_1200px))
 				{
-					_5grid.isDesktop = true;
-					_5grid.is1000px = true;
+					_grid.isDesktop = true;
+					_grid.is1000px = true;
 					_head.prepend('<meta name="viewport" content="width=' + _opts['viewport.is1000px'] + '" />');
-					_headQueue.pushE_5grid(_baseURL + '5grid/core-desktop.css');
-					_headQueue.pushE_5grid(_baseURL + '5grid/core-1000px.css');
-					_headQueue.pushE_5grid(_baseURL + _opts['prefix'] + '-1000px.css');
+					_headQueue.pushE_grid(_baseURL + 'grid/core-desktop.css');
+					_headQueue.pushE_grid(_baseURL + 'grid/core-1000px.css');
+					_headQueue.pushE_grid(_baseURL + _opts['prefix'] + '-1000px.css');
 				}
 				// 1200px (exclusive)
 				else if (_1200px && (ww >= 1200 || !_1000px))
 				{
-					_5grid.isDesktop = true;
-					_5grid.is1200px = true;
+					_grid.isDesktop = true;
+					_grid.is1200px = true;
 					_head.prepend('<meta name="viewport" content="width=' + _opts['viewport.is1200px'] + '" />');
-					_headQueue.pushE_5grid(_baseURL + '5grid/core-desktop.css');
-					_headQueue.pushE_5grid(_baseURL + '5grid/core-1200px.css');
-					_headQueue.pushE_5grid(_baseURL + _opts['prefix'] + '-1200px.css');
+					_headQueue.pushE_grid(_baseURL + 'grid/core-desktop.css');
+					_headQueue.pushE_grid(_baseURL + 'grid/core-1200px.css');
+					_headQueue.pushE_grid(_baseURL + _opts['prefix'] + '-1200px.css');
 				}
 			}
 		}
 
-		jQuery(function() { jQuery('.5grid-layout').addClass('5grid'); });
+		jQuery(function() { jQuery('.grid-layout').addClass('grid'); });
 	})();
 
 /*********************/
@@ -331,7 +331,7 @@
 				mobileUI_site_group = jQuery().add(mobileUI_site_wrapper).add(mobileUI_site_titlebar);
 
 				body.bind('touchmove', function(e) {
-					if (mobileUI_site_nav.isOpen_5grid)
+					if (mobileUI_site_nav.isOpen_grid)
 					{
 						e.stopPropagation();
 						e.preventDefault();
@@ -345,13 +345,13 @@
 						.css('top', (_opts['mobileUI.titleBarOverlaid'] == 1 ? 0 : _opts['mobileUI.titleBarHeight'] + 'px'))
 						.css('width', '100%')
 						.bind(_eventType, function(e) {
-							if (mobileUI_site_nav.isOpen_5grid)
+							if (mobileUI_site_nav.isOpen_grid)
 							{
 								e.preventDefault();
-								body.trigger('5grid_closeNav');
+								body.trigger('grid_closeNav');
 							}
 						})
-						.bind('5grid_top', function(e) {
+						.bind('grid_top', function(e) {
 							if (_isLocked)
 								return;
 							_isLocked = true;
@@ -363,12 +363,12 @@
 						.css('position', 'absolute')
 						.css('z-index', '152')
 						.css('cursor', 'pointer')
-						.disableSelection_5grid()
+						.disableSelection_grid()
 						.appendTo(mobileUI_site_titlebar)
 						.bind(_eventType, function(e) {
 							e.stopPropagation();
 							e.preventDefault();
-							body.trigger('5grid_toggleNav');
+							body.trigger('grid_toggleNav');
 						});
 						
 				// Mobile Site Bar
@@ -380,7 +380,7 @@
 						.css('overflow', 'hidden')
 						.css('height', _opts['mobileUI.titleBarHeight'] + 'px')
 						.css('line-height', _opts['mobileUI.titleBarHeight'] + 'px')
-						.disableSelection_5grid()
+						.disableSelection_grid()
 						.prependTo(body);
 						
 				// Mobile Site Nav
@@ -389,7 +389,7 @@
 						.css('z-index', '150')
 						.css('top', '0')
 						.css('height', '100%')
-						.disableSelection_5grid()
+						.disableSelection_grid()
 						.prependTo(body);
 
 					mobileUI_site_nav
@@ -403,7 +403,7 @@
 						.click(function(e) {
 							e.preventDefault();
 							e.stopPropagation();
-							body.trigger('5grid_closeNav', [jQuery(this).attr('href')]);
+							body.trigger('grid_closeNav', [jQuery(this).attr('href')]);
 						});
 
 					if (_isTouch) {
@@ -422,25 +422,25 @@
 					else
 						mobileUI_site_nav.css('overflow', 'auto');
 
-					mobileUI_site_nav.isOpen_5grid = false;
+					mobileUI_site_nav.isOpen_grid = false;
 
 				// Body
 					body	
 						.css('overflow', (_isTouch ? 'hidden' : 'visible'))
-						.bind('5grid_toggleNav', function() {
-							if (mobileUI_site_nav.isOpen_5grid)
-								body.trigger('5grid_closeNav');
+						.bind('grid_toggleNav', function() {
+							if (mobileUI_site_nav.isOpen_grid)
+								body.trigger('grid_closeNav');
 							else
-								body.trigger('5grid_openNav');
+								body.trigger('grid_openNav');
 						})
-						.bind('5grid_openNav', function() {
+						.bind('grid_openNav', function() {
 							if (_isLocked)
 								return true;
 							_isLocked = true;
 							var nw = jQuery(window).width() - _opts['mobileUI.openerWidth'];
 							mobileUI_site_group
 								.css('width', jQuery(window).width())
-								.disableSelection_5grid();
+								.disableSelection_grid();
 							mobileUI_site_nav
 								.show()
 								.scrollTop(0)
@@ -449,11 +449,11 @@
 							mobileUI_site_nav.animate({ left: 0 }, speed, easing);
 							mobileUI_site_group.animate({ left: nw }, speed, easing, function() {
 								_isLocked = false;
-								mobileUI_site_nav.isOpen_5grid = true;
-								_5grid.trigger('mobileUINavOpen');
+								mobileUI_site_nav.isOpen_grid = true;
+								_grid.trigger('mobileUINavOpen');
 							});
 						})
-						.bind('5grid_closeNav', function(e, url) {
+						.bind('grid_closeNav', function(e, url) {
 							if (_isLocked)
 								return true;
 							_isLocked = true;
@@ -463,12 +463,12 @@
 								mobileUI_site_group
 									.css('width', '100%')
 									.css('overflow', 'visible')
-									.enableSelection_5grid();
+									.enableSelection_grid();
 								mobileUI_site_wrapper.css('position', 'relative');
 								mobileUI_site_titlebar.css('position', (_opts['mobileUI.titleBarFixed'] == 1 ? 'fixed' : 'absolute'));
-								mobileUI_site_nav.isOpen_5grid = false;
+								mobileUI_site_nav.isOpen_grid = false;
 								mobileUI_site_nav.hide();
-								_5grid.trigger('mobileUINavclose');
+								_grid.trigger('mobileUINavclose');
 								_isLocked = false;
 								
 								if (url)
@@ -481,12 +481,12 @@
 					// Window
 						_window
 							.bind('orientationchange', function(e) {
-								if (mobileUI_site_nav.isOpen_5grid) {
+								if (mobileUI_site_nav.isOpen_grid) {
 									var nw = jQuery(window).width() - _opts['mobileUI.openerWidth'];
 									mobileUI_site_nav.css('width', nw);
 									mobileUI_site_group.css('left', nw);
 								}
-								_5grid.trigger('orientationChange');
+								_grid.trigger('orientationChange');
 							});
 				
 			// Remove mobileUI-hide elements
@@ -501,9 +501,9 @@
 /* Head Queue        */
 /*********************/
 
-	_headQueue.process_5grid();
-	_5grid.isReady = true;
+	_headQueue.process_grid();
+	_grid.isReady = true;
 
-	jQuery(function() { _5grid.readyCheck(); });
+	jQuery(function() { _grid.readyCheck(); });
 
 })();

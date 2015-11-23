@@ -22,26 +22,26 @@ $user = new User();
 <meta name="description" content="" />
 <meta name="keywords" content="" />
 <noscript>
-<link rel="stylesheet" href="../css/5grid/core.css" />
-<link rel="stylesheet" href="../css/5grid/core-desktop.css" />
-<link rel="stylesheet" href="../css/5grid/core-1200px.css" />
-<link rel="stylesheet" href="../css/5grid/core-noscript.css" />
+<link rel="stylesheet" href="../css/grid/core.css" />
+<link rel="stylesheet" href="../css/grid/core-desktop.css" />
+<link rel="stylesheet" href="../css/grid/core-1200px.css" />
+<link rel="stylesheet" href="../css/grid/core-noscript.css" />
 <link rel="stylesheet" href="../css/style.css" />
 <link rel="stylesheet" href="../css/style-desktop.css" />
 </noscript>
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <link href='http://fonts.googleapis.com/css?family=Niconne' rel='stylesheet' type='text/css'>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-<script src="../css/5grid/init.js?use=mobile,desktop,1000px&amp;mobileUI=1&amp;mobileUI.theme=none"></script>
+<script src="../css/grid/init.js?use=mobile,desktop,1000px&amp;mobileUI=1&amp;mobileUI.theme=none"></script>
 <script src="../scripts/popup.js"></script>
 <!--[if IE 9]><link rel="stylesheet" href="css/style-ie9.css" /><![endif]-->
 </head><body>
 <div id="wrapper">
 	<div id="header-wrapper">
 		<header id="header">
-			<div class="5grid-layout">
+			<div class="grid-layout">
 				<div id="top" class="row">
-					<div class="12u">
+					<div class="u12">
 						<div id="logo">
 							<h1><a href="../"><img src="../images/logo_white.png" alt="" style="display: block;" /></a></h1>
 							<h2>Preparing students for careers in technologies</h2>
@@ -55,9 +55,9 @@ $user = new User();
 					</div>
 				</div>
 			</div>
-			<div class="5grid-layout">
+			<div class="grid-layout">
 				<div class="row">
-					<div class="12u" id="menu">
+					<div class="u12" id="menu">
 						<div id="menu-wrapper">
 							<nav class="mobileUI-site-nav">
 								<ul>
@@ -76,10 +76,10 @@ $user = new User();
 			</div>
 		</header>
 	</div>
-	<div id="page-wrapper" class="5grid-layout">
-		<div class="5grid-layout">
+	<div id="page-wrapper" class="grid-layout">
+		<div class="grid-layout">
 			<div class="row">
-				<div class="8u">
+				<div class="u8">
 					<div id="content">
 						<h2>MC<sup>2</sup></h2>
 						<p>MC<sup>2</sup> Chair: Cory Maughmer</p>
@@ -90,7 +90,7 @@ $user = new User();
 						</p>
 					</div>
 				</div>
-				<div class="4u">
+				<div class="u4">
 					<div id="sidebar2">
 						<section>
 							<div class="sbox1">
@@ -107,7 +107,7 @@ $user = new User();
 		</div>
 	</div>
 </div>
-<div id="copyright" class="5grid-layout">
+<div id="copyright" class="grid-layout">
 	<section>
 		<p>&copy; Texas A&M University IEEE |  Design: <a href="http://templated.co/">TEMPLATED</a> | <a href="javascript:%20popup_show()">Meta Login</a></p>
         <br>

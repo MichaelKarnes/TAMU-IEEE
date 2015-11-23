@@ -11,17 +11,17 @@
 <meta name="description" content="" />
 <meta name="keywords" content="" />
 <noscript>
-<link rel="stylesheet" href="../css/5grid/core.css" />
-<link rel="stylesheet" href="../css/5grid/core-desktop.css" />
+<link rel="stylesheet" href="../css/grid/core.css" />
+<link rel="stylesheet" href="../css/grid/core-desktop.css" />
 <link rel="stylesheet" href="../css/5fgrid/core-1200px.css" />
-<link rel="stylesheet" href="../css/5grid/core-noscript.css" />
+<link rel="stylesheet" href="../css/grid/core-noscript.css" />
 <link rel="stylesheet" href="../css/style.css" />
 <link rel="stylesheet" href="../css/style-desktop.css" />
 </noscript>
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <link href='http://fonts.googleapis.com/css?family=Niconne' rel='stylesheet' type='text/css'>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-<script src="../css/5grid/init.js?use=mobile,desktop,1000px&amp;mobileUI=1&amp;mobileUI.theme=none"></script>
+<script src="../css/grid/init.js?use=mobile,desktop,1000px&amp;mobileUI=1&amp;mobileUI.theme=none"></script>
 <script src="../scripts/popup.js"></script>
 <script src="../scripts/expand.js"></script>
 <?php
@@ -34,9 +34,9 @@ $nivo->render_includes();
 <div id="wrapper">
 	<div id="header-wrapper">
 		<header id="header">
-			<div class="5grid-layout">
+			<div class="grid-layout">
 				<div id="top" class="row">
-					<div class="12u">
+					<div class="u12">
 						<div id="logo">
 							<h1><a href=""><img src="../images/logo_white.png" alt="" style="display: block;" /></a></h1>
 							<h2>Preparing students for careers in technologies</h2>
@@ -50,9 +50,9 @@ $nivo->render_includes();
 					</div>
 				</div>
 			</div>
-			<div class="5grid-layout">
+			<div class="grid-layout">
 				<div class="row">
-					<div class="12u" id="menu">
+					<div class="u12" id="menu">
 						<div id="menu-wrapper">
 							<nav class="mobileUI-site-nav">
 								<ul>
@@ -71,47 +71,40 @@ $nivo->render_includes();
 			</div>
 		</header>
 	</div>
-	<div id="page-wrapper" class="5grid-layout">
-		<div class="5grid-layout">
+	<div id="page-wrapper" class="grid-layout">
+		<div class="grid-layout">
 			<div class="row">
-				<div class="12u">
+				<div class="u12">
 					<div id="banner">
 						<?php
-                            $nivo->add_slide('http://www.ieeetamu.org/images/chevron-phillips-banner.jpg','https://www.facebook.com/events/1651214638470238/','Chevron Phillips October 29');
-                            $nivo->add_slide('http://www.ieeetamu.org/images/frieee-day-halloween-banner.jpg','https://www.facebook.com/events/458908400962639/','FrIEEE Day October 30');
-                            $nivo->add_slide('http://www.ieeetamu.org/images/prosthetic-hand-banner.jpg','https://www.facebook.com/ieeetamu/videos/1072047142807423/','3D Printed Prosthetic Hand by Benjamin Cervantes and Gabriel Wang');
-							$nivo->render_slides();
+                            $nivo->add_slide('http://www.ieeetamu.org/images/aggie+replant+banner.jpg','','Aggie Replant November 15th');
+                            $nivo->render_slides();
 						?>
 					</div>
 					<!--<div id="banner"><a href="#"><img src="images/pics01.jpg" alt=""></a></div>-->
 				</div>
 			</div>
 		</div>
-		<div class="5grid-layout">
+		<div class="grid-layout">
 			<div class="row">
-                <div class="9u">
+                <div class="u9">
 					<div id="content">
                         <section style="float:left; width: 100%;">
 							<div class="post" style="float:left;">
-								<h2>Chevron Phillips Chemical</h2>
+								<h2>Biotronik</h2>
 								<p style="float:left; width: 100%;">
-									<a href="https://www.facebook.com/events/1651214638470238/" target="_blank"><img src="https://gallery.mailchimp.com/33b9ea9f8b20c10680334de73/images/f73722c9-3a7e-4b9a-8bae-35c40aa4e57f.jpg" width="200" alt="" align="left" class="img-alignleft" /></a>
-                                    <b>Check this out!</b><br>
-                                    IEEE will be hosting Richard Olivo from Chevron Phillips Chemical. Richard will go over the culture at the company, the kind of work EEs do, and the various career opportunities
-                                    at CPChem for EEs. Richard will also give resume writing tips and advice on how to be better prepared for the Engineering Career Fair.<br>
-                                    <br>
-                                    <b>About the speaker:</b><br>
-                                    Richard Olivo is a maintenance engineer at Chevron Phillips Chemical. He got his BS in Electrical Engineering from Texas A&M University in 2014.<br>
-                                    <br>
-                                    <a href="https://www.facebook.com/events/1651214638470238/" target="_blank">https://www.facebook.com/events/1651214638470238/</a><br>
+									<a href="http://ieeetamu.us11.list-manage.com/track/click?u=33b9ea9f8b20c10680334de73&id=8299168ca6&e=c5f188e9e7"><img src="https://gallery.mailchimp.com/33b9ea9f8b20c10680334de73/images/ba0908dc-2ef0-43c6-ab5d-9fcadf13172c.png" width="200" alt="" align="left" class="img-alignleft" /></a>
+                                    <b>Discover R&D in the health industry!</b><br>
+                                    Biotronik specializes in R&D of pacemakers and neuromodulators. They are rapidly growing company and are actively seeking new electrical engineers to help develop the newest and the most advanced pacemakers.
+                                    If you are interested, please RSVP here: <a href="https://goo.gl/vZ70Jj" target="_blank">https://goo.gl/vZ70Jj</a>.<br>
                                 </p>
 								<span class="expand" style="float:left">
 									<span class="expand-details expand-less">
 										<br>
-										<span style="float: left; width: 70px;">Date: </span><span class="font2">Thursday, October 29th</span><br>
-                                        <span style="float: left; width: 70px;">Time: </span><span class="font2">6:00 pm</span><br>
-										<span style="float: left; width: 70px;">Location: </span><span class="font2">WEB 236C</span><br>
-                                        <span style="float: left;">* Food and Drinks will be provided.</span>
+										<span style="float: left; width: 70px;">Date: </span><span class="font2">Monday, November 23rd</span><br>
+										<span style="float: left; width: 70px;">Time: </span><span class="font2">7:00 pm - 9:00 pm</span><br>
+										<span style="float: left; width: 70px;">Location: </span><span class="font2">ETB 1034</span><br>
+                                        <span style="float: left;">Food will be provided. Also, bring your resumes!</span>
 									</span>
 									<br>
 									<span class="expand-summary">View Details <i class="fa fa-chevron-down"></i></span>
@@ -120,18 +113,23 @@ $nivo->render_includes();
 						</section>
                         <section style="float:left; width: 100%;">
 							<div class="post" style="float:left;">
-								<h2>FrIEEE Day</h2>
+								<h2>Open Officer Positions</h2>
 								<p style="float:left; width: 100%;">
-									<img src="https://gallery.mailchimp.com/33b9ea9f8b20c10680334de73/images/4dd31f35-0dd8-4551-99a7-7ef5c8779f10.png" width="200" alt="" align="left" class="img-alignleft" />
-                                    <b>Are you looking for a way to take a break?</b><br>
-                                    IEEE will be hosting its first social of the school year! Join us for games and food! Bring your friends and join us to win some prizes!<br>
+									<a href="http://ieeetamu.us11.list-manage2.com/track/click?u=33b9ea9f8b20c10680334de73&id=429c0fc51d&e=c5f188e9e7" target="_blank"><img src="https://gallery.mailchimp.com/33b9ea9f8b20c10680334de73/images/e4fc5ea1-15b2-4c54-a8b1-13bb291a4885.jpg" width="200" alt="" align="left" class="img-alignleft" /></a>
+                                    <b>Below are the open officer positions:</b><br>
+                                    Social Media Chair <br>
+                                    Internal Recruiting Chair <br>
+                                    If you are interested, please:<br>
+                                    1. Download the attached <a href="http://ieeetamu.us11.list-manage2.com/track/click?u=33b9ea9f8b20c10680334de73&id=429c0fc51d&e=c5f188e9e7" target="_blank">application.</a><br>
+                                    2. Complete the application. <br>
+                                    3. Email the application and resume to the <a href="mailto:president@ieeetamu.org" target="_blank">president</a> and
+                                    <a href="mailto:secretary@ieeetamu.org" target="_blank">secretary</a>.
+                                    <br>
                                 </p>
 								<span class="expand" style="float:left">
 									<span class="expand-details expand-less">
 										<br>
-										<span style="float: left; width: 70px;">Date: </span><span class="font2">Friday, October 30th</span><br>
-                                        <span style="float: left; width: 70px;">Time: </span><span class="font2">4:00 pm</span><br>
-										<span style="float: left; width: 70px;">Location: </span><span class="font2">John Crompton Park</span>
+										<span style="float: left; width: 70px;">Deadline: </span><span class="font2">Monday, November 30th</span>
 									</span>
 									<br>
 									<span class="expand-summary">View Details <i class="fa fa-chevron-down"></i></span>
@@ -140,29 +138,14 @@ $nivo->render_includes();
 						</section>
                         <section style="float:left; width: 100%;">
 							<div class="post" style="float:left;">
-								<h2>Network with Intel</h2>
+								<h2>IEEE Snapchat</h2>
 								<p style="float:left; width: 100%;">
-									<img src="http://www.ieeetamu.org/images/Intel.jpg" width="200" alt="" align="left" class="img-alignleft" />
-                                    Intel will be speaking to IEEE on <b>November 5th</b>.<br>
+									<img src="https://gallery.mailchimp.com/33b9ea9f8b20c10680334de73/images/94e7121c-630e-4632-89ad-4e23751d2b18.png" width="200" alt="" align="left" class="img-alignleft" />
+                                    <b>Follow IEEE at Texas A&M via Snapchat!</b><br>
+                                    We will be posting all our activities and adventures so what are you waiting for?<br>
                                     <br>
-                                    <b>About the speaker:</b><br>
-                                    John Wei is an engineering manager at Intel in Santa Clara, CA. He has a BSE and MSE in Electrical Engineering.
-                                    John’s team works with server companies to design the highest performing servers in the world.
-                                    Through computing innovation, Intel pushes the boundaries of smart and connected technology to make amazing experiences possible for every person on Earth.
-                                    Intel has annual revenues over $56 billion, and is consistently ranked on Fortune’s “100 Best Companies to Work For”.
-                                    John is on campus at Texas A&M to interview and hire interns for his team.
+                                    In addition, we will feature your snaps on our story, so make sure you snap IEEE!<br>
                                 </p>
-								<span class="expand" style="float:left">
-									<span class="expand-details expand-less">
-										<br>
-										<span style="float: left; width: 70px;">Date: </span><span class="font2">Thursday, November 5th</span><br>
-										<span style="float: left; width: 70px;">Time: </span><span class="font2">TBA</span><br>
-										<span style="float: left; width: 70px;">Location: </span><span class="font2">TBA</span><br>
-                                        <span style="float: left;">* Food and Drinks will be provided. Also, make sure to bring your resume!</span>
-									</span>
-									<br>
-									<span class="expand-summary">View Details <i class="fa fa-chevron-down"></i></span>
-								</span>
 							</div>
 						</section>
                         <section style="float:left; width: 100%;">
@@ -170,6 +153,7 @@ $nivo->render_includes();
 								<h2>Other Events</h2>
                                 <b>National Security Agency Applications</b><br>
 								<span class="expand">
+                                    <span class="expand-summary">View Details <i class="fa fa-chevron-down"></i></span>
 									<span class="expand-details expand-less">
                                         <br>
                                         The <a href="http://www.aftercollege.com/op/op.asp?id=14718&campaignid=vtrfYBmm3bGCBzhA&messageid=1CGQ9apqO9tNMg1K&source=ur-cs" target="_blank">National Security Agency</a> offers more than a steady paycheck. It offers a career that will support the safety and security of the United States for generations to come.<br>
@@ -204,11 +188,11 @@ $nivo->render_includes();
                                         <br>
                                         Learn more about available career opportunities and application instructions by visiting <a href="http://www.aftercollege.com/op/op.asp?id=14723&campaignid=vtrfYBmm3bGCBzhA&messageid=1CGQ9apqO9tNMg1K&source=ur-cs" target="_blank">http://www.aftercollege.com/company/national-security-agency/</a>.<br>
 									</span>
-									<span class="expand-summary">View Details <i class="fa fa-chevron-down"></i></span>
 								</span><br>
                                 <br>
                                 <b>National Security Agency CyberSprint</b><br>
 								<span class="expand">
+                                    <span class="expand-summary">View Details <i class="fa fa-chevron-down"></i></span>
 									<span class="expand-details expand-less">
                                         <br>
                                         <b>Shut down a simulated security threat in our cyber competition</b><br>
@@ -231,11 +215,11 @@ $nivo->render_includes();
                                         <br>
                                         *U.S. citizenship required for employment<br>
                                     </span>
-									<span class="expand-summary">View Details <i class="fa fa-chevron-down"></i></span>
 								</span><br>
                                 <br>
                                 <b>Sandia National Labs Critical Skills Master's Program and Master's Fellowship Program</b><br>
 								<span class="expand">
+                                    <span class="expand-summary">View Details <i class="fa fa-chevron-down"></i></span>
 									<span class="expand-details expand-less">
                                         <br>
                                         Are you finishing up your undergrad degree in CS, CE, Cybersecurity, EE, ME or Mathematics and planning to enroll in a Master's program next fall? If you have a GPA of 3.2 or higher, and are interested in a career in national security, then check out Sandia National Labs <a href="https://www.aftercollege.com/op/op.asp?id=16163&campaignid=7eb9PQvNbYydLH6E&messageid=QDCEzHf1Sg3USbv4&jid=0&messageid=M7xBUIcUyVzo4sk4&campaignid=jC0lFsUPj00Au7KY&gid=0&sid=0" target="_blank">Critical Skills Master's Program</a>, or our <a href="https://www.aftercollege.com/op/op.asp?id=16164&campaignid=7eb9PQvNbYydLH6E&messageid=QDCEzHf1Sg3USbv4&jid=0&messageid=M7xBUIcUyVzo4sk4&campaignid=jC0lFsUPj00Au7KY&gid=0&sid=0" target="_blank">Master's Fellowship Program</a> for underrepresented minorities.<br>
@@ -257,13 +241,12 @@ $nivo->render_includes();
                                         <br>
                                         <em>If this is not the right program for you, check out our regular positions, internships and post doc jobs at <a href="http://www.sandia.gov" target="_blank">www.sandia.gov</a>. Feel free to pass this along to your colleagues and friends.</em><br>
 									</span>
-									<span class="expand-summary">View Details <i class="fa fa-chevron-down"></i></span>
 								</span>
 							</div>
 						</section>
 					</div>
 				</div>
-				<div class="3u">
+				<div class="u3">
 					<div id="sidebar2">
 						<section>
 							<div class="sbox1">
@@ -317,7 +300,7 @@ $nivo->render_includes();
 		</div>
 	</div>
 </div>
-<div id="copyright" class="5grid-layout">
+<div id="copyright" class="grid-layout">
 	<section>
 		<p>&copy; Texas A&M University IEEE |  Design: <a href="http://templated.co/">TEMPLATED</a> | <a href="javascript:%20popup_show()">Meta Login</a></p>
         <br>

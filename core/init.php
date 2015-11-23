@@ -7,6 +7,7 @@ $GLOBALS['config'] = array(
 		'host' => '68.178.143.53',
 		'username' => 'ieeeDB2',
 		'password' => 'IT0fficer!',
+        //_,vtPeciU%ox
 		'db' => 'ieeeDB2'
 	),
 	'remember' => array(
