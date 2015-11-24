@@ -2,6 +2,7 @@
 require_once '../core/init.php';
 
 $user = new User();
+$token = Token::generate();
 ?>
 <!DOCTYPE HTML>
 <!--
@@ -75,77 +76,29 @@ $user = new User();
 			<div class="row">
 				<div class="u12">
 					<div id="content">
-						<h2>Contacts Us</h2>
-						<p>Howdy!</p>
-						<p>If you have any questions, please email <a href="mailto:secretary@ieeetamu.org" target="_blank">secretary@ieeetamu.org</a>.</p>
+						<h2>Contact Us</h2>
+                                                <form method="post" action="http://www.ieeetamu.org/actions/mail/send.php">
+						<p>Who would you like to contact?</p>
 						<br>
-						<table>
-							<tr>
-								<th>Position</th>
-								<th>Name</th>
-								<th>Email</th>
-							</tr>
-							<tr>
-								<td>President</td>
-								<td>Ken McDole</td>
-								<td><a href="mailto:president@ieeetamu.org" target="_blank">president@ieeetamu.org</a></td>
-							</tr>
-							<tr>
-								<td>Vice President</td>
-								<td>Zac Clingaman</td>
-								<td><a href="mailto:vp@ieeetamu.org" target="_blank">vp@ieeetamu.org</a></td>
-							</tr>
-							<tr>
-								<td>Chief Financial Officer</td>
-								<td>Nathan Parish</td>
-								<td><a href="mailto:cfo@ieeetamu.org" target="_blank">cfo@ieeetamu.org</a></td>
-							</tr>
-							<tr>
-								<td>Activities Chair</td>
-								<td>Alex Benavides</td>
-								<td><a href="mailto:activities@ieeetamu.org" target="_blank">activities@ieeetamu.org</a></td>
-							</tr>
-							<tr>
-								<td>Corporate Relations Chair</td>
-								<td>Adway Dogra</td>
-								<td><a href="mailto:corporate@ieeetamu.org" target="_blank">corporate@ieeetamu.org</a></td>
-							</tr>
-							<tr>
-								<td>Information Technology Chair</td>
-								<td>Michael Karnes</td>
-								<td><a href="mailto:it@ieeetamu.org" target="_blank">it@ieeetamu.org</a></td>
-							</tr>
-							<tr>
-								<td>Marketing Chair</td>
-								<td>Yuki Oji</td>
-								<td><a href="mailto:marketing@ieeetamu.org" target="_blank">marketing@ieeetamu.org</a></td>
-							</tr>
-							<tr>
-								<td>MC<sup>2</sup> Chair</td>
-								<td>Cory Maughmer</td>
-								<td><a href="mailto:mcu@ieeetamu.org" target="_blank">mcu@ieeetamu.org</a></td>
-							</tr>
-							<tr>
-								<td>Outreach Chair</td>
-								<td>D'Anne Wilder</td>
-								<td><a href="mailto:outreach@ieeetamu.org" target="_blank">outreach@ieeetamu.org</a></td>
-							</tr>
-							<tr>
-								<td>Secretary</td>
-								<td>Benjamin Cervantes</td>
-								<td><a href="mailto:secretary@ieeetamu.org" target="_blank">secretary@ieeetamu.org</a></td>
-							</tr>
-							<tr>
-								<td>EGE Graduate Advisor</td>
-								<td>Rhonda Putz</td>
-								<td><a href="mailto:rrputz@tamu.edu" target="_blank">rrputz@tamu.edu</a></td>
-							</tr>
-							<tr>
-								<td>Faculty Advisor</td>
-								<td>Dr. Gregory Huff</td>
-								<td><a href="mailto:ghuff@tamu.edu" target="_blank">ghuff@tamu.edu</a></td>
-							</tr>
-						</table>
+                                                <select name="Contact">
+                                                    <option> Ken McDole (President)</option>
+                                                    <option> Zac Clingaman (Vice President)</option>
+                                                </select>
+                                                <br> <br>
+                                                <label for="Name">Name (Required)</label> <br>
+                                                <input name="Name" type="text" id="Name"/>
+                                                <br><br>
+                                                <label for="Email">Email (Required)</label> <br>
+                                                <input name="Email" type="text" id="Email"/>
+                                                <br><br>
+                                                <label for="Subject">Subject</label><br>
+                                                <input name="Subject" type="text" id="Subject"/>
+                                                <br><br>
+                                                <label for="Message">Message</label><br>
+                                                <textarea name="Message" id="Message"> </textarea>
+                                                <input name="token" type="hidden" value="<?php echo $token; ?>"/>
+                                                <input type="Submit" value="Send" class="button" />
+                                                </form>
 					</div>
 				</div>
 			</div>
@@ -176,7 +129,7 @@ $user = new User();
 			<label for="username">Username: </label><input id="username" name="username" type="text">
 			<label for="password">Password: </label><input id="password" name="password" type="password">
 			<input type="checkbox" id="remember" name="remember" ><label for="remember"> Remember me</label>
-			<input type="hidden" name="token" value="<?php echo Token::generate(); ?>" />
+			<input type="hidden" name="token" value="<?php echo $token; ?>" />
 			<center><input type="submit" id="submit" class="button" value="Login" /></center>
 		</form>
 	</section>
